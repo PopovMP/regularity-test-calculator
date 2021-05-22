@@ -1,0 +1,41 @@
+body {
+    background-color: #333;
+    color: beige;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#error-message {
+    color: black;
+    background-color: #bd5656;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+}
+
+#input {
+    float: left;
+    background-color: #333;
+    color: beige;
+    margin-right: 20px;
+}
+
+#button-calculate {
+    margin: 5px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 3px;
+    text-align: right;
+}
+table {
+    border-collapse: collapse;
+    margin-left: 20px;
+}

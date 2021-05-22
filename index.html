@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Regularity Test</title>
+  <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+<h1>Regularity Test</h1>
+<div>
+
+<label for="input" style="display: none"></label>
+<textarea id="input" cols="15" rows="30">
+1.2
+3.3
+16.61
+...
+16.61, 45
+21.9, 60
+25.85,45
+26.52
+27.22
+27.85 60
+28.7
+32.75,40
+33.7
+34.8
+35.5 60
+43.35 40
+44.9 60
+48.40
+===
+48.65
+49.01
+49.61
+49.70
+...
+49.7 46
+55 61
+58.9 41
+59.6
+60.3
+60.9 61
+61.75
+65.82
+===
+66.78
+67.04
+</textarea>
+
+<table>
+  <thead>
+    <tr>
+      <th>S km</th>
+      <th>dS km</th>
+      <th>S miles</th>
+      <th>V km/h</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody id="output">
+  </tbody>
+</table>
+
+</div>
+<div class="clearfix"></div>
+
+<div id="error-message" style="display: none"></div>
+
+<button id="button-calculate">Calculate</button>
+
+<h2>Syntax</h2>
+
+<pre>
+13.42     ; Distance [km]
+...       ; Start RT section
+18.21 60  ; Distance [km] and average speed [km/h] for the next section
+19.30     ; WP with the same average speed
+22.2, 40  ; Delimiter: /[, \t]+/
+28        ; WP with the same average speed
+===       ; End RT Section
+33.3      ; Distance
+...       ; Start of next RT section
+
+
+</pre>
+<script src="index.js"></script>
+<script>
+    (() => {
+    	initialize()
+    })()
+</script>
+</body>
+</html>
